@@ -4,7 +4,7 @@
 set -euo pipefail
 
 # ---- EDIT THESE for your SaaS (or inject when generating the link) ----
-SAAS_SA_EMAIL="${byosa-setup-service-account@test-byosa-setup-project.iam.gserviceaccount.com}"
+SAAS_SA_EMAIL="byosa-setup-service-account@test-byosa-setup-project.iam.gserviceaccount.com"
 # Minimum roles so YOUR backend can later enable APIs + create/operate the workload SA.
 # Keep this list tight — this is privileged, consented, revocable access (not a hidden backdoor).
 #   serviceAccountCreator  -> create SAs only (narrower than serviceAccountAdmin)
