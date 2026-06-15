@@ -38,7 +38,7 @@ PROJECT_ID="${1:-}"
 if [[ -z "${PROJECT_ID}" ]]; then
   # NAME is a display name — does NOT need to be unique.
   # ID must be globally unique across all of Google Cloud and is permanent (lowercase, no spaces).
-  PROJECT_NAME="Test Saas Backup $(date '+%Y-%m-%d %H:%M')"
+  PROJECT_NAME="Test Saas Backup $(date +%s)"
   NEW_ID="test-backup-$(date +%s)"   # epoch keeps the ID globally unique
   echo "==> Creating project: ${PROJECT_NAME}  (id: ${NEW_ID})"
   if gcloud projects create "${NEW_ID}" --name="${PROJECT_NAME}" 2>/tmp/createerr; then
